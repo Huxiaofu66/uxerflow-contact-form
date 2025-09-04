@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - Uxerflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'PingFang SC', sans-serif;
+        }
+        
+        .custom-checkbox {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #dfe1e7;
+            border-radius: 3px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .custom-checkbox:checked {
+            background: #5f57ff;
+            border-color: #5f57ff;
+        }
+        
+        .custom-radio {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #dfe1e7;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .custom-radio:checked {
+            background: #5f57ff;
+            border-color: #5f57ff;
+        }
+        
+        .submit-btn {
+            background: #0d0d12;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:disabled {
+            background: #a4acb9;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        
+        .error {
+            border-color: #ef4444 !important;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 导航栏 -->
+    <nav class="absolute top-0 left-0 w-full px-20 py-5 flex items-center justify-between z-50">
+        <div class="h-[45px] w-[310px] bg-gray-200 rounded"></div>
+        <div class="flex items-center gap-10">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 px-2 py-1 rounded-md">
+                    <span class="text-white text-lg">解决方案</span>
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span class="text-white text-lg px-2 py-1">项目</span>
+                <span class="text-white text-lg px-2 py-1">服务</span>
+                <span class="text-white text-lg px-2 py-1">关于</span>
+                <span class="text-white text-lg px-2 py-1">订阅</span>
+            </div>
+            <button class="bg-white text-[#6157ff] px-[17px] py-[9px] rounded-full flex items-center gap-2">
+                <span class="font-medium">联系我们</span>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="bg-white flex flex-col items-start justify-start relative w-full">
+        <!-- 顶部区域 -->
+        <div class="bg-[#0d0d12] flex flex-col items-center justify-start pb-[88px] pt-[166px] px-20 relative w-full">
+            <div class="flex flex-col items-start justify-start max-w-[1280px] relative w-[1280px]">
+                <div class="flex flex-col gap-4 items-center justify-center pb-[81px] pl-[273.48px] pr-[273.47px] pt-0 relative w-full">
+                    <div class="flex gap-1.5 items-start justify-start pl-[13px] pr-[17px] py-[7px] relative rounded-[99px] border border-[#272835]">
+                        <div class="w-[17px] h-[25.6px] bg-gray-300 rounded"></div>
+                        <span class="text-[#666d80] text-sm font-medium">定制计划</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-start max-w-[900px] pb-0 pt-4 px-0 relative">
+                        <h1 class="text-white text-[68px] font-medium text-center leading-[85px] tracking-[-1.36px]">
+                            让我们一起开始一个项目
+                        </h1>
+                    </div>
+                    <div class="flex flex-col items-center justify-start max-w-[700px] px-[3.38px] py-0 relative">
+                        <p class="text-[#666d80] text-base text-center leading-[25.6px]">
+                            也许与 Uxerflow 合作可以让您的业务受益？请在下面的表格中分享您的想法，我们将在收到询问后的 48 小时内回复。
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-[4.01px] items-center justify-center relative">
+                        <p class="text-[#666d80] text-base">您也可以通过或讨厌联系表格与我们联系？</p>
+                        <a href="mailto:hello@uxerflow.com" class="text-white text-base">hello@uxerflow.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 表单区域 -->
+        <div class="flex flex-col items-center justify-start overflow-hidden px-[100px] py-28 relative w-full">
+            <div class="flex flex-col items-start justify-start max-w-[1240px] pb-[88px] pt-0 px-10 relative w-[1240px]">
+                <div class="flex flex-col gap-12 items-start justify-start relative w-full">
+                    
+                    <!-- 基本信息部分 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium tracking-[-0.64px]">先让我们知道吧👋</h2>
+                        </div>
+                        <div class="flex flex-col gap-6 items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <div class="flex flex-col gap-2.5 items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">姓名 *</label>
+                                <input type="text" id="name" required class="bg-[#f8fafb] h-[52px] px-[17px] py-4 rounded-[6px] w-full text-[#040404] text-sm font-medium">
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+                            <div class="flex flex-col gap-[10.01px] items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">电子邮件地址 *</label>
+                                <input type="email" id="email" required class="bg-[#f8fafb] h-[52px] px-[17px] py-[17.5px] rounded-[6px] w-full text-[#040404] text-sm font-medium">
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                            <div class="flex flex-col gap-2.5 items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">公司名称 *</label>
+                                <input type="text" id="company" required class="bg-[#f8fafb] h-[52px] px-[17px] py-4 rounded-[6px] w-full text-[#040404] text-sm">
+                                <div class="error-message" id="company-error"></div>
+                            </div>
+                            <div class="flex flex-col gap-2.5 items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">你来自哪里？或者你的时区是哪个？ *</label>
+                                <input type="text" id="location" required class="bg-[#f8fafb] h-[52px] px-[17px] py-4 rounded-[6px] w-full text-[#040404] text-sm font-medium">
+                                <div class="error-message" id="location-error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 解决方案选择 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium tracking-[-0.64px]">选择解决方案🚀</h2>
+                        </div>
+                        <div class="flex flex-col gap-3 items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="solutions" value="remote-design" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">远程设计合作伙伴</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="solutions" value="new-features" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">创建新特征</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="solutions" value="redesign" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">重新设计网站/应用程序</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="solutions" value="ui-kit" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">UI 套件和模板制作</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="solutions" value="startup" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">开始你的事业</span>
+                            </label>
+                            <div class="error-message" id="solutions-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- 项目描述 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium leading-[31.2px] tracking-[-0.64px]">
+                                你开发了哪些具体的服务<br>或产品？我可以看看吗？<br>👀
+                            </h2>
+                        </div>
+                        <div class="flex flex-col gap-[24.01px] items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <div class="flex flex-col gap-[10.01px] items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">项目描述 *</label>
+                                <textarea id="project-description" required class="bg-[#f8fafb] min-h-40 pb-[127.01px] pt-[13px] px-[17px] rounded-[6px] w-full text-[#040404] text-sm" placeholder="输入您的项目描述..."></textarea>
+                                <div class="error-message" id="project-description-error"></div>
+                            </div>
+                            <div class="flex flex-col gap-2.5 items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">目前项目进展到什么程度了？ *</label>
+                                <textarea id="project-progress" required class="bg-[#f8fafb] min-h-40 pb-[127.01px] pt-[13px] px-[17px] rounded-[6px] w-full text-[#040404] text-sm" placeholder="输入您当前的项目进度..."></textarea>
+                                <div class="error-message" id="project-progress-error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 项目目标 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium tracking-[-0.64px]">您的项目目标一览...🚀</h2>
+                        </div>
+                        <div class="flex flex-col items-start justify-start relative w-[649.59px]">
+                            <div class="flex flex-col gap-[10.01px] items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">项目目标及问题 *</label>
+                                <textarea id="project-goals" required class="bg-[#f8fafb] min-h-40 pb-[127.01px] pt-[13px] px-[17px] rounded-[6px] w-full text-[#040404] text-sm" placeholder="输入您的项目目标和问题..."></textarea>
+                                <div class="error-message" id="project-goals-error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 协助工作 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium leading-[31.2px] tracking-[-0.64px]">
+                                我们能协助哪些工作？<br>🧩
+                            </h2>
+                        </div>
+                        <div class="flex flex-col gap-3 items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="assistance" value="ui-ux" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">UI/UX 设计</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="assistance" value="frontend" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">前端开发</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="assistance" value="branding" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">品牌与标志</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="assistance" value="icons" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">图标和插图</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="checkbox" name="assistance" value="motion" class="custom-checkbox">
+                                <span class="text-[#0d0d12] text-base font-medium">动态图形</span>
+                            </label>
+                            <div class="error-message" id="assistance-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- 竞争对手 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium tracking-[-0.64px]">你的主要竞争对手是谁？🏄</h2>
+                        </div>
+                        <div class="flex flex-col items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <div class="flex flex-col gap-2.5 items-start justify-start relative w-full">
+                                <label class="text-[#818898] text-base">主要竞争对手 *</label>
+                                <textarea id="competitors" required class="bg-[#f8fafb] min-h-40 pb-[127.01px] pt-[13px] px-[17px] rounded-[6px] w-full text-[#040404] text-sm" placeholder="输入您的竞争对手..."></textarea>
+                                <div class="error-message" id="competitors-error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 投资预算 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium leading-[31.2px] tracking-[-0.64px]">
+                                您愿意为潜在投资分配多少资<br>金？（人民币）📈
+                            </h2>
+                        </div>
+                        <div class="flex flex-col gap-3 items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="budget" value="50k-100k" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">50000 - 100,000 人民币</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="budget" value="100k-200k" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">100,000 - 200,000 人民币</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="budget" value="200k-500k" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">200,000 - 500,000 人民币</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="budget" value="500k+" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">500,000 人民币及以上</span>
+                            </label>
+                            <div class="error-message" id="budget-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- 时间表 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium tracking-[-0.64px]">你心中有时间表吗？📅</h2>
+                        </div>
+                        <div class="flex flex-col gap-3 items-start justify-start pb-[49px] pt-0 px-0 relative w-[649.59px] border-b border-[#dfe1e7]">
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="timeline" value="asap" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">尽快！</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="timeline" value="1-2weeks" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">1-2周</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="timeline" value="2-4weeks" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">2-4周</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="timeline" value="1-2months" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">1-2个月</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="timeline" value="long-term" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">长期</span>
+                            </label>
+                            <div class="error-message" id="timeline-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- 了解渠道 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col items-start justify-start max-w-[342px] relative w-[342px]">
+                            <h2 class="text-[#0d0d12] text-2xl font-medium leading-[31.2px] tracking-[-0.64px]">
+                                最后一个问题，你是如何知道我<br>们的？😃
+                            </h2>
+                        </div>
+                        <div class="flex flex-col gap-3 items-start justify-start relative w-[649.59px]">
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="source" value="dribbble" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">滴答声</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="source" value="website" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">网站</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="source" value="google" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">谷歌</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="source" value="behance" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">Behance</span>
+                            </label>
+                            <label class="h-[52px] min-h-[52px] relative rounded-[8px] w-full border border-[#dfe1e7] flex items-center gap-3 px-4 cursor-pointer">
+                                <input type="radio" name="source" value="other" class="custom-radio">
+                                <span class="text-[#0d0d12] text-base font-medium">其他的</span>
+                            </label>
+                            <div class="error-message" id="source-error"></div>
+                        </div>
+                    </div>
+
+                    <!-- 提交按钮 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="max-w-[342px] w-[342px]"></div>
+                        <div class="flex flex-col items-start justify-start relative w-[649.59px]">
+                            <button id="submit-btn" disabled class="submit-btn min-h-12 px-6 py-[11.15px] rounded-[999px] text-white text-base font-semibold text-center">
+                                提交表格
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部区域 -->
+        <div class="flex flex-col items-start justify-start relative w-full">
+            <div class="bg-[#0d0d12] flex flex-col items-center justify-start px-20 py-[120px] relative w-full">
+                <div class="flex flex-col gap-[88px] items-start justify-start max-w-[1280px] relative w-[1280px]">
+                    <div class="flex flex-col gap-6 items-center justify-start pl-0 pr-[0.01px] py-0 relative w-full">
+                        <div class="flex flex-col gap-4 h-[111px] items-center justify-center relative w-full">
+                            <h3 class="text-white text-[52px] font-semibold text-center leading-[65px] tracking-[-0.8px]">
+                                立即发送您的请求，我们会和您联系！
+                            </h3>
+                            <p class="text-[#666d80] text-xl text-center leading-[30px]">
+                                立即提交您的请求，并在短短几周内启动您的项目。保证快速、高效、专业的结果。
+                            </p>
+                        </div>
+                        <div class="flex gap-4 h-[111px] items-end justify-end relative w-[410.66px]">
+                            <button class="bg-white text-[#5f57ff] px-[25px] py-[11.2px] rounded-[999px] flex items-center gap-2">
+                                <span class="font-semibold">保持联系</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <button class="bg-[#0d0d12] border border-[#272835] px-[25px] py-[11.2px] rounded-[999px] flex items-center gap-2">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-white font-semibold">查看我们的工作</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 工作流程 -->
+                    <div class="flex items-start justify-between relative w-full">
+                        <div class="flex flex-col gap-10 items-start justify-start relative">
+                            <div class="w-12 h-12 bg-gray-300 rounded"></div>
+                            <div class="flex flex-col gap-4 items-start justify-start relative">
+                                <h4 class="text-white text-2xl font-semibold">1. 简要介绍</h4>
+                                <p class="text-[#666d80] text-base leading-[24px] max-w-[380px]">
+                                    首先进行全面的简报，概述您的项目要求。我们的团队随时准备迅速将您的概念变为现实。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-10 items-start justify-start relative">
+                            <div class="w-12 h-12 bg-gray-300 rounded"></div>
+                            <div class="flex flex-col gap-4 items-start justify-start relative">
+                                <h4 class="text-white text-2xl font-semibold">2. 映射</h4>
+                                <p class="text-[#666d80] text-base leading-[24px] max-w-[380px]">
+                                    深入研究详细的项目规划，确保每个方面都无缝衔接。立即发送您的请求，开启通往成功的旅程。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-10 items-start justify-start relative">
+                            <div class="w-12 h-12 bg-gray-300 rounded"></div>
+                            <div class="flex flex-col gap-4 items-start justify-start relative">
+                                <h4 class="text-white text-2xl font-semibold">3. 共同努力</h4>
+                                <p class="text-[#666d80] text-base leading-[24px] max-w-[380px]">
+                                    您的创意，我们的专业知识——充满活力的合作伙伴关系，成就辉煌。立即发送您的请求，让我们一起踏上这段创意之旅。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 页脚 -->
+            <div class="bg-[#0d0d12] flex flex-col items-center justify-start pb-9 pt-0 px-20 relative w-full">
+                <div class="flex flex-col gap-[100px] items-start justify-start relative w-full">
+                    <div class="flex items-start justify-start pb-0 pt-20 px-0 relative w-full border-t border-[#272835]">
+                        <div class="flex flex-col gap-5 items-start justify-start px-2.5 py-0 relative w-[540px]">
+                            <div class="h-[45px] w-[310px] bg-gray-200 rounded"></div>
+                            <p class="text-[#666d80] text-lg leading-[25.6px] max-w-[345px]">
+                                数字代理机构通过以人为本的设计方法帮助找到解决方案。
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4 items-start justify-start relative">
+                            <h5 class="text-[#666d80] text-base font-medium">技术支持</h5>
+                            <a href="#" class="text-white text-base font-medium">技术文档</a>
+                            <a href="#" class="text-white text-base font-medium">FAQ</a>
+                            <a href="#" class="text-white text-base font-medium">在线客服</a>
+                            <a href="#" class="text-white text-base font-medium">联系我们</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-start justify-start relative">
+                            <h5 class="text-[#666d80] text-base font-medium">公司</h5>
+                            <a href="#" class="text-white text-base font-medium">关于我们</a>
+                            <a href="#" class="text-white text-base font-medium">团队介绍</a>
+                            <a href="#" class="text-white text-base font-medium">合作伙伴</a>
+                            <a href="#" class="text-white text-base font-medium">企业文化</a>
+                        </div>
+                        <div class="flex flex-col gap-4 items-start justify-start relative">
+                            <h5 class="text-[#666d80] text-base font-medium">博客</h5>
+                            <a href="#" class="text-white text-base font-medium">行业动态</a>
+                            <a href="#" class="text-white text-base font-medium">使用技巧</a>
+                            <a href="#" class="text-white text-base font-medium">成功故事</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between relative w-full">
+                        <p class="text-[#666d80] text-base">© Uxerflow 2024.保留所有权利</p>
+                        <div class="flex gap-10 items-start justify-start relative">
+                            <a href="#" class="text-[#666d80] text-base font-medium">隐私政策</a>
+                            <a href="#" class="text-[#666d80] text-base font-medium">条款和条件</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 表单验证逻辑
+        class FormValidator {
+            constructor() {
+                this.submitBtn = document.getElementById('submit-btn');
+                this.formFields = {
+                    // 文本输入字段
+                    textFields: [
+                        'name', 'email', 'company', 'location', 
+                        'project-description', 'project-progress', 'project-goals', 'competitors'
+                    ],
+                    // 复选框组
+                    checkboxGroups: [
+                        { name: 'solutions', errorId: 'solutions-error' },
+                        { name: 'assistance', errorId: 'assistance-error' }
+                    ],
+                    // 单选框组
+                    radioGroups: [
+                        { name: 'budget', errorId: 'budget-error' },
+                        { name: 'timeline', errorId: 'timeline-error' },
+                        { name: 'source', errorId: 'source-error' }
+                    ]
+                };
+                
+                this.init();
+            }
+            
+            init() {
+                // 为所有表单字段添加事件监听器
+                this.addEventListeners();
+                // 初始验证
+                this.validateForm();
+            }
+            
+            addEventListeners() {
+                // 文本输入字段
+                this.formFields.textFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.addEventListener('input', () => this.validateForm());
+                        field.addEventListener('blur', () => this.validateField(fieldId));
+                    }
+                });
+                
+                // 复选框组
+                this.formFields.checkboxGroups.forEach(group => {
+                    const checkboxes = document.querySelectorAll(`input[name="${group.name}"]`);
+                    checkboxes.forEach(checkbox => {
+                        checkbox.addEventListener('change', () => this.validateForm());
+                    });
+                });
+                
+                // 单选框组
+                this.formFields.radioGroups.forEach(group => {
+                    const radios = document.querySelectorAll(`input[name="${group.name}"]`);
+                    radios.forEach(radio => {
+                        radio.addEventListener('change', () => this.validateForm());
+                    });
+                });
+            }
+            
+            validateField(fieldId) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(`${fieldId}-error`);
+                
+                if (!field || !errorElement) return true;
+                
+                const isValid = this.isFieldValid(field);
+                
+                if (!isValid) {
+                    field.classList.add('error');
+                    errorElement.textContent = '此字段为必填项';
+                } else {
+                    field.classList.remove('error');
+                    errorElement.textContent = '';
+                }
+                
+                return isValid;
+            }
+            
+            isFieldValid(field) {
+                if (!field) return false;
+                
+                // 检查文本输入字段
+                if (field.type === 'text' || field.type === 'email' || field.tagName === 'TEXTAREA') {
+                    return field.value.trim().length > 0;
+                }
+                
+                return true;
+            }
+            
+            validateCheckboxGroup(groupName) {
+                const checkboxes = document.querySelectorAll(`input[name="${group.name}"]:checked`);
+                return checkboxes.length > 0;
+            }
+            
+            validateRadioGroup(groupName) {
+                const radio = document.querySelector(`input[name="${group.name}"]:checked`);
+                return radio !== null;
+            }
+            
+            validateForm() {
+                let isValid = true;
+                
+                // 验证文本字段
+                this.formFields.textFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field && !this.isFieldValid(field)) {
+                        this.validateField(fieldId);
+                        isValid = false;
+                    } else if (field) {
+                        this.validateField(fieldId);
+                    }
+                });
+                
+                // 验证复选框组
+                this.formFields.checkboxGroups.forEach(group => {
+                    const hasSelection = this.validateCheckboxGroup(group.name);
+                    const errorElement = document.getElementById(group.errorId);
+                    
+                    if (!hasSelection) {
+                        if (errorElement) {
+                            errorElement.textContent = '请至少选择一个选项';
+                        }
+                        isValid = false;
+                    } else {
+                        if (errorElement) {
+                            errorElement.textContent = '';
+                        }
+                    }
+                });
+                
+                // 验证单选框组
+                this.formFields.radioGroups.forEach(group => {
+                    const hasSelection = this.validateRadioGroup(group.name);
+                    const errorElement = document.getElementById(group.errorId);
+                    
+                    if (!hasSelection) {
+                        if (errorElement) {
+                            errorElement.textContent = '请选择一个选项';
+                        }
+                        isValid = false;
+                    } else {
+                        if (errorElement) {
+                            errorElement.textContent = '';
+                        }
+                    }
+                });
+                
+                // 更新提交按钮状态
+                this.submitBtn.disabled = !isValid;
+                
+                return isValid;
+            }
+            
+            getFormData() {
+                const formData = {};
+                
+                // 收集文本字段数据
+                this.formFields.textFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        formData[fieldId] = field.value.trim();
+                    }
+                });
+                
+                // 收集复选框数据
+                this.formFields.checkboxGroups.forEach(group => {
+                    const checkboxes = document.querySelectorAll(`input[name="${group.name}"]:checked`);
+                    formData[group.name] = Array.from(checkboxes).map(cb => cb.value);
+                });
+                
+                // 收集单选框数据
+                this.formFields.radioGroups.forEach(group => {
+                    const radio = document.querySelector(`input[name="${group.name}"]:checked`);
+                    formData[group.name] = radio ? radio.value : '';
+                });
+                
+                return formData;
+            }
+        }
+        
+        // 初始化表单验证器
+        const formValidator = new FormValidator();
+        
+        // 提交按钮点击事件
+        document.getElementById('submit-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (formValidator.validateForm()) {
+                const formData = formValidator.getFormData();
+                console.log('表单数据:', formData);
+                
+                // 这里可以添加实际的提交逻辑
+                alert('表单提交成功！\n\n表单数据已记录在控制台中。');
+                
+                // 可选：重置表单
+                // document.querySelector('form').reset();
+                // formValidator.validateForm();
+            }
+        });
+    </script>
+</body>
+</html>
